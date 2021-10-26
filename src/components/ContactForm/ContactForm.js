@@ -3,6 +3,7 @@ import { Form,Button } from "react-bootstrap";
 import axios from "axios";
 import * as configSettings from "../../../config";
 
+
 const {  REACT_APP_MYDAILYVA_API_PROTOCOL
     : API_PROTOCOL,   REACT_APP_MYDAILYVA_API_URL
     : API_URL} = configSettings;
@@ -15,7 +16,9 @@ export const ContactForm = () =>{
         email:'',
         phoneno:'',
         location:'',
-        requirement:''
+        requirement:'',
+
+    
     });
   
     const [nameError,setnameError] = useState('');
@@ -23,12 +26,16 @@ export const ContactForm = () =>{
    const [phonenoError, setPhonenoError] = useState('');
    const [locationError,setLocationError] = useState('');
    const [requirementError, setRequirementError] = useState('');
+   const [submit, setsubmit] = useState(false);
+   const [inputValue, setInputValue] = useState("");
+ 
+
+
  
   
     const handleSubmit = (e) =>{
        e.preventDefault();
-    
-       //console.log(formState);
+      // console.log(formState);
         let flag=0;
        if(formState.name==''){
         setnameError('Enter Your Name');
@@ -57,10 +64,14 @@ export const ContactForm = () =>{
         flag=1;
        }
        if(flag==0){
-            requestApi();
-       }
-       
+        setsubmit(true)
+        
+        requestApi();
+        
+        
       
+       }  
+
     }
     const requestApi = async () => {
       
@@ -76,17 +87,11 @@ export const ContactForm = () =>{
         console.log(config);
         let response = await axios(config);
         console.log(response);
-    if(
-      !nameError &&  !emailError && !phonenoError && !locationError && !requirementError){
+       
+        
 
-       alert("Data submitted successfully")
-      
-        }
-        else  {
-               alert("Fill the data properly")
-
-        } 
     }
+
    
     const handleInputChange = e =>{
         const input = e.target;
@@ -103,6 +108,13 @@ export const ContactForm = () =>{
         <>
      
         <div className="form-container">
+         {
+            submit?
+      
+                <div class="alert alert-success" role="alert">
+                Thank you have succesfully sign up the form
+              </div>:""     
+        }
            <Form onSubmit={handleSubmit} class="form_container">
             <Form.Group controlId='name' className="mb-15">
                 <Form.Label>Name:</Form.Label>
