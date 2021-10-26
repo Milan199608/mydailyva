@@ -1,0 +1,55 @@
+.mm-menu{
+	display:none;	
+}
+@media screen and (max-width:991px) {
+nav:not(.mm-menu) {
+	display: none;
+}
+.mm-menu{
+	display:block;	
+}
+
+.app-header-mobile.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.app-header-mobile a.mobmenu {
+	display: block;
+	width: 48px;
+	
+	padding: 11px;
+	position: absolute;
+	top: 18px;
+	left: 10px;
+	z-index: 100002;
+}
+.app-header-mobile a.mobmenu:before,
+.app-header-mobile a.mobmenu:after {
+	content: '';
+	display: block;
+	background: #FFF;
+	height: 2px;
+}
+.app-header-mobile a.mobmenu span {
+	background: #FFF;
+	display: block;
+	height: 2px;
+	margin: 6px 0;
+}
+.mm-menu_offcanvas{
+	z-index:10000;	
+	top:0px;
+}
+.mm-list li a img{
+	margin-right:10px;
+}
+}
+/*.mm-menu{
+	background:#003678;
+	
+}
+.mm-list > li > a{
+	color:#FFF;	
+}*/

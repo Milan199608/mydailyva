@@ -1,0 +1,10 @@
+.intro-box{
+    background-color: rgb(247, 243, 243);
+    border:2px solid hsl(0, 17%, 87%);
+    margin:100px 60px 12px 60px;
+
+}
+.terms-box-inside{
+    margin-top:12px;
+    
+}

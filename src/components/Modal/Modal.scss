@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.modal.show{
+    display:block;
+}
+.modal-header {
+    border-bottom: 0px;
+}
+.mt-10{
+    margin-top:10px;
+}
+.mt-20{
+    margin-top:20px;
+}
+.mb-10{
+    margin-bottom:10px;
+}
+.btn{
+    margin:0px 5px;
+}
+.m-0{
+    margin:0;
+}
+.mr-10{
+    margin-right:10px;
+}
+.mr-5{
+    margin-right:5px !important;
+}
+.modal{
+    overflow-y:scroll !important;
+}
+.form-control {
+    background: #F2F6F9;
+    border: 1px solid #F2F6F9;
+}
+.btn-primary{
+    background: #1a7db6;
+    text-transform: uppercase;
+    color: #FFF;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+}
+.btn-primary:hover{
+    background-color: #07517c;
+}
+.btn-black{
+    background: #676660 !important;
+    color: #FFF !important;
+    border: 1px solid #676660 !important;
+}
+.btn-orange{
+    background: #FF6100 !important;
+    color: #FFF !important;
+    border: 1px solid #FF6100 !important;
+}
+.modal-body .input-group-btn .btn{
+    border-top-left-radius: 0px;
+border-bottom-left-radius: 0px;
+}
+.modal-backdrop{
+    display:none;
+  }
+  .modal-backdrop.fade.show {
+    display: block;
+}

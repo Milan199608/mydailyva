@@ -1,0 +1,71 @@
+{
+  "name": "mydailyva",
+  "version": "1.0.0",
+  "description": "Mydailyva",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Autoprefixer",
+    "PostCSS",
+    "Webpack",
+    "React",
+    "Babel"
+  ],
+  "author": "Tapas Dey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "license": "ISC",
+  "browserslist": "> 1%,last 2 versions",
+
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "autoprefixer": "^9.7.3",
+    "css-loader": "^3.6.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss": "^8.1.0",
+    "postcss-loader": "^4.0.2",
+    "redux-devtools": "^3.7.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^1.2.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/runtime": "^7.15.4",
+    "@reduxjs/toolkit": "^1.6.1",
+    "axios": "^0.23.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "bootstrap": "^5.1.2",
+    "core-js": "^3.18.3",
+    "dotenv": "^10.0.0",
+    "font-awesome": "^4.7.0",
+    "mini-css-extract-plugin": "^2.1.0",
+    "react": "^16.12.0",
+    "react-alert": "^7.0.3",
+    "react-alice-carousel": "^2.5.1",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.12.1",
+    "react-hot-loader": "^4.13.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-slick": "^0.28.1",
+    "redux-logger": "^3.0.6",
+    "regenerator-runtime": "^0.13.9",
+    "slick-carousel": "^1.8.1"
+  }
+}

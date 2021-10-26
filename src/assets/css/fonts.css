@@ -1,0 +1,108 @@
+
+@font-face {
+  font-family: 'WorkSans-Bold';
+  src: url('../fonts/worksans/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-Bold.woff') format('woff'), url('../fonts/worksans/WorkSans-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-ExtraBold';
+  src: url('../fonts/worksans/WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-ExtraBold.woff') format('woff'), url('../fonts/worksans/WorkSans-ExtraBold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-Light';
+  src: url('../fonts/worksans/WorkSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-Light.woff') format('woff'), url('../fonts/worksans/WorkSans-Light.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-Medium';
+  src: url('../fonts/worksans/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-Medium.woff') format('woff'), url('../fonts/worksans/WorkSans-Medium.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-Regular';
+  src: url('../fonts/worksans/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-Regular.woff') format('woff'), url('../fonts/worksans/WorkSans-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WorkSans-SemiBold';
+  src: url('../fonts/worksans/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/worksans/WorkSans-SemiBold.woff') format('woff'), url('../fonts/worksans/WorkSans-SemiBold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'SofiaPro';
+  src: url('../fonts/sofiapro/SofiaPro.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro.woff') format('woff'), url('../fonts/sofiapro/SofiaPro.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SofiaPro-Black';
+  src: url('../fonts/sofiapro/SofiaPro-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro-Black.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro-Black.woff') format('woff'), url('../fonts/sofiapro/SofiaPro-Black.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SofiaPro-Bold';
+  src: url('../fonts/sofiapro/SofiaPro-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro-Bold.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro-Bold.woff') format('woff'), url('../fonts/sofiapro/SofiaPro-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SofiaPro-Light';
+  src: url('../fonts/sofiapro/SofiaPro-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro-Light.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro-Light.woff') format('woff'), url('../fonts/sofiapro/SofiaPro-Light.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SofiaPro-Medium';
+  src: url('../fonts/sofiapro/SofiaPro-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro-Medium.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro-Medium.woff') format('woff'), url('../fonts/sofiapro/SofiaPro-Medium.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SofiaPro-SemiBold';
+  src: url('../fonts/sofiapro/SofiaPro-SemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/sofiapro/SofiaPro-SemiBold.otf')  format('opentype'),
+         url('../fonts/sofiapro/SofiaPro-SemiBold.woff') format('woff'), url('../fonts/sofiapro/SofiaPro-SemiBold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('../fonts/caveat/Caveat-Bold.eot');
+    src: url('../fonts/caveat/Caveat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/caveat/Caveat-Bold.woff') format('woff'),
+        url('../fonts/caveat/Caveat-Bold.ttf') format('truetype'),
+       
+    font-weight: bold;
+    font-style: normal;
+}
