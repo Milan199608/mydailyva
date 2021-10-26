@@ -36,7 +36,8 @@ export const ContactForm = () =>{
       
        if (formState.email=='') {
         setEmailError ( 'Email required');
-      } else if (!/\S+@\S+\.\S+/.test(formState.email)) {
+      } 
+      else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(formState.email)) {
         setEmailError ('Email address is invalid');
       }
       if (formState.phoneno=='') {
@@ -63,8 +64,6 @@ export const ContactForm = () =>{
     }
     const requestApi = async () => {
       
-        
-
         const REQUEST_ENDPOINT = "dev/api/submitcontact";
         const REQUEST_METHOD = "POST";
         const request_url = `${API_PROTOCOL}://${API_URL}/${REQUEST_ENDPOINT}`;
@@ -83,11 +82,10 @@ export const ContactForm = () =>{
        alert("Data submitted successfully")
       
         }
-        else if( nameError ||  emailError || phonenoError || locationError || requirementError) {
-            alert("Fill the data properly")
+        else  {
+               alert("Fill the data properly")
 
-        }
-        
+        } 
     }
    
     const handleInputChange = e =>{
@@ -155,7 +153,7 @@ export const ContactForm = () =>{
                 <Form.Label>Requirement :</Form.Label>
                 <Form.Control 
                     as="textarea"
-                    placeholder="Enter your location"
+                    placeholder="Tell me your requirements"
                     className="form-control"
                     onChange={handleInputChange}
                     defaultValue={formState.requirement}

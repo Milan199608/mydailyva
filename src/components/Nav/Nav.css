@@ -39,9 +39,7 @@ ul>.nav-item >a:hover {
         align-items: center;
         justify-content: space-between;
         font-size: 14px;
-        
-       
-    
+     
     }
     .navbar-toggler-icon{
         font:#ffffff;
@@ -66,11 +64,10 @@ ul>.nav-item >a:hover {
         font-size: 1.5rem;
         background: none;
       
-      }
-      
+      }      
       .nav-menu{
         background-color: #16423c;
-        width: 250px;
+        width: 200px;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -78,11 +75,9 @@ ul>.nav-item >a:hover {
        position: fixed;
         top: 0;
         left: -100%;
-        transition: 850ms;
+        transition: 1200ms;  
         
-        
-      }
-      
+      } 
       .nav-menu.active {
         left: 0;
         margin-top: 80px;

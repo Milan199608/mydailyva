@@ -1,26 +1,24 @@
 import React from 'react';
 
-export const Sidebar =
-   
+export const Sidebar=
              [
       {
        title: 'Home',
-       path: '/Home',
-      cName: 'nav-text'
-    
-                  },
+       path: '/',
+      cName: 'nav-text',
+       },
   {
     title: 'About',
     path: '/about-us',
     cName: 'nav-text'
   },
   {
-    title: 'Contact us'
-    ,
-    path: '/reports',
+    title: 'Contact us',
+    path: '/contact-us',
     cName: 'nav-text'
   }
 ];
+
     
 
 export default Sidebar;

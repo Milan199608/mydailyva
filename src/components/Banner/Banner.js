@@ -30,20 +30,20 @@ const Banner = (props) => {
 
         <div class="row no-gutters" id="row_section">
             
-          <div class="col-lg-4 col-md-12 " style={{background:"rgb(93, 162, 223)"}}>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" style={{background:"rgb(93, 162, 223)"}}>
             <div class="icon-box d-flex ">
               <div class="icon"><i class="fa fa-calendar"></i></div>
               <h4 class="title"><a href="">Get back hours of time each week</a></h4>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12" style={{background:"rgb(59, 121, 191)"}}>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" style={{background:"rgb(59, 121, 191)"}}>
             <div class="icon-box d-flex">
               <div class="icon"><i class="fa fa-user"></i></div>
               <h4 class="title"><a href="">Outsource to someone you trust</a></h4>
               
             </div>
           </div>
-          <div class="col-lg-4 col-md-12" style={{background:"rgb(42, 49, 61)"}}>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" style={{background:"rgb(42, 49, 61)"}}>
             <div class="icon-box d-flex ">
               <div class="icon"><i class="fa fa-trophy"></i></div>
               <h4 class="title"><a href="">Compound time savings into success</a></h4>
