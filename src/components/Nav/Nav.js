@@ -4,7 +4,9 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import NavImage from "../../assets/Image/logonew.png";
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const {modalOpenFunc} = props;
+
   const [sidebar, setSidebar] = useState(false);
   
   const showSidebar = () => setSidebar(!sidebar);
@@ -58,9 +60,8 @@ const NavBar = () => {
                 </li>
                    
             </ul>
-         
-      
-          <button class="btn btn-success my-2 my-sm-0" type="submit">Request A Consultation</button>
+        
+          <button class="btn btn-success my-2 my-sm-0"  type="submit"><Link  onClick={modalOpenFunc}>Request A Consultation</Link></button>
 
         </div>
         <div className="clear"></div>

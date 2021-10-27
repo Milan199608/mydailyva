@@ -2,15 +2,12 @@ import React,{ useState} from "react";
 import { Form,Button } from "react-bootstrap";
 import axios from "axios";
 import * as configSettings from "../../../config";
-
-
 const {  REACT_APP_MYDAILYVA_API_PROTOCOL
     : API_PROTOCOL,   REACT_APP_MYDAILYVA_API_URL
     : API_URL} = configSettings;
 
 export const ContactForm = () =>{
    
-
     const [formState, setformState] = useState({
         name:'',
         email:'',
@@ -18,23 +15,18 @@ export const ContactForm = () =>{
         location:'',
         requirement:'',
 
-    
     });
   
     const [nameError,setnameError] = useState('');
     const [emailError,setEmailError] = useState('');
-   const [phonenoError, setPhonenoError] = useState('');
-   const [locationError,setLocationError] = useState('');
-   const [requirementError, setRequirementError] = useState('');
-   const [submit, setsubmit] = useState(false);
-   const [inputValue, setInputValue] = useState("");
- 
+   const  [phonenoError, setPhonenoError] = useState('');
+   const  [locationError,setLocationError] = useState('');
+   const  [requirementError, setRequirementError] = useState('');
+   const  [submit, setsubmit] = useState(false);
 
-
- 
-  
     const handleSubmit = (e) =>{
-       e.preventDefault();
+     e.preventDefault();
+     setformState("");
       // console.log(formState);
         let flag=0;
        if(formState.name==''){
@@ -65,14 +57,14 @@ export const ContactForm = () =>{
        }
        if(flag==0){
         setsubmit(true)
-        
         requestApi();
-        
-        
-      
-       }  
+        document.getElementById("form_check").reset();
 
-    }
+        //document.getElementsById("form_check").reset();
+     
+       }
+    
+}
     const requestApi = async () => {
       
         const REQUEST_ENDPOINT = "dev/api/submitcontact";
@@ -84,38 +76,29 @@ export const ContactForm = () =>{
             url: request_url,
             data: formState            
         };
-        console.log(config);
+       // console.log(config);
         let response = await axios(config);
         console.log(response);
-       
-        
-
+     
     }
 
-   
     const handleInputChange = e =>{
         const input = e.target;
         const {value} = input;
         const {id} = input;
-        setformState(prevFormState => ({...prevFormState,[id]:value}));
-       
+        setformState(prevFormState => ({...prevFormState,[id]:value}));   
     }
-   
-/* 
-}; */
 
     return(
         <>
-     
         <div className="form-container">
          {
             submit?
-      
                 <div class="alert alert-success" role="alert">
                 Thank you have succesfully sign up the form
               </div>:""     
         }
-           <Form onSubmit={handleSubmit} class="form_container">
+           <Form onSubmit={handleSubmit} class="form_container" id="form_check">
             <Form.Group controlId='name' className="mb-15">
                 <Form.Label>Name:</Form.Label>
                 <Form.Control 
@@ -151,20 +134,22 @@ export const ContactForm = () =>{
                   {phonenoError!=''?<span className="valmessage">{phonenoError}</span>:''}
             </Form.Group>
             <Form.Group controlId='location' className="mb-15">
-                <Form.Label>Location :</Form.Label>
-                <Form.Control 
-                    as="textarea"
+                <Form.Label >Location :
+                    
+                </Form.Label>
+                <Form.Control
+                    as="textarea" 
                     placeholder="Enter your location"
                     className="form-control"
                     onChange={handleInputChange}
-                    defaultValue={formState.location}
+                    defaultValue={formState.location} 
                 />
                  {locationError!=''?<span className="valmessage">{locationError}</span>:''}
             </Form.Group>
             <Form.Group controlId='requirement' className="mb-15">
                 <Form.Label>Requirement :</Form.Label>
                 <Form.Control 
-                    as="textarea"
+                    as="textarea" 
                     placeholder="Tell me your requirements"
                     className="form-control"
                     onChange={handleInputChange}

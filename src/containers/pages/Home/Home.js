@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import { Helmet } from 'react-helmet';
-import {Modal,Banner,Card, Client, CommonCard, ContactForm} from '../../../components';
+import {Modal,Banner,Card, Client, CommonCard, ContactForm,Nav} from '../../../components';
 import {PageContainer} from '../../';
 
 const Home = () => {
@@ -120,7 +120,7 @@ const Home = () => {
         <PageContainer title={metaTitle} description={metaDescription}>
        
             {/* <Popup /> */}
-            
+            <Nav modalOpenFunc={handleModalOpenFunc}/>
             <Banner modalOpenFunc={handleModalOpenFunc}/>
             <section id="services" class="services section-bg">
                 <div class="container" data-aos="fade-up">

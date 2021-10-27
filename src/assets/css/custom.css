@@ -88,4 +88,12 @@ body{
 .btn-success{
 	border-color: #fcfdfd !important;
 }
+a {
+    color: #f3f5f7;
+    text-decoration: none;
+}
+a:hover{
+	color: #f3f5f7;
+
+}
 
