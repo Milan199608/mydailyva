@@ -1,12 +1,12 @@
 import React,{ useState } from 'react'
-import { Helmet } from 'react-helmet';
+                                                                                                                                                                              
 import {Modal,Banner,Card, Client, CommonCard, ContactForm,Nav} from '../../../components';
 import {PageContainer} from '../../';
 
 const Home = () => {
 
     const specTopCardContent=[
-        {
+        {                        
             
             icon:'far fa-envelope',
             heading:'Inbox Management',
@@ -157,9 +157,7 @@ const Home = () => {
                     </div>
                     
                 </div>
-            </section>
-
-           
+            </section>  
          <Client />
          <Modal {...addNewContactModalProps} />
         </PageContainer>

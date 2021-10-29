@@ -40,7 +40,7 @@ export class AppEntry extends Component {
 
     return (
       <Provider store={initializeStore()}>
-        <BrowserRouter >
+        <BrowserRouter basename="/dev/mdvphp" >
           {/*<div id='global-header' class='global-header'>*/}
           {/*  /!* eslint-disable-next-line react/jsx-no-undef *!/*/}
           {/*  <span>GLOBAL HEADER</span>*/}

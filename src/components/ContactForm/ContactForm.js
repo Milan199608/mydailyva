@@ -59,9 +59,7 @@ export const ContactForm = () =>{
         setsubmit(true)
         requestApi();
         document.getElementById("form_check").reset();
-
         //document.getElementsById("form_check").reset();
-     
        }
     
 }
@@ -79,7 +77,6 @@ export const ContactForm = () =>{
        // console.log(config);
         let response = await axios(config);
         console.log(response);
-     
     }
 
     const handleInputChange = e =>{
@@ -91,14 +88,14 @@ export const ContactForm = () =>{
 
     return(
         <>
-        <div className="form-container">
+        <div className="form-container"  >
          {
             submit?
                 <div class="alert alert-success" role="alert">
                 Thank you have succesfully sign up the form
               </div>:""     
         }
-           <Form onSubmit={handleSubmit} class="form_container" id="form_check">
+           <Form onSubmit={handleSubmit} class="form_container" id="form_check" >
             <Form.Group controlId='name' className="mb-15">
                 <Form.Label>Name:</Form.Label>
                 <Form.Control 
@@ -156,11 +153,9 @@ export const ContactForm = () =>{
                     defaultValue={formState.requirement}
                 />
                    {requirementError!=''?<span className="valmessage">{requirementError}</span>:''}
-
-                   
+  
             </Form.Group>
             
-                
                 <Button type="submit" onClick={handleSubmit} className="btn btn-success">
                 Submit
                 </Button>

@@ -8,7 +8,7 @@ import {Pages} from "../";
 //import {PageLoadingSpinner} from "../../components";
 import {applicationConstants} from "../../constants";
 const {ROUTES} = applicationConstants;
-import {Nav,TopFooter,BottomFooter, Banner} from '../../components';
+import {Nav,TopFooter,BottomFooter} from '../../components';
 
 
 //import {appActions} from "../../store";
@@ -45,26 +45,27 @@ export const AppRouting = ({errorThrown}) => {
         </Route>
         <Route exact path={`/${ROUTES.ABOUTUS}`}>
         <Nav/>
-      
         <Pages.About/>
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.CONTACTUS}`}>
         <Nav/>
         <Pages.Contact/>
-       
+        <BottomFooter />
+        </Route>
+        <Route exact path={`/${ROUTES.BLOG}`}>
+        <Nav/>
+        <Pages.Blog/>
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.PRIVACY}`}>
           <Nav/>
           <Pages.Privacy/>
-       
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.TERM}`}>
         <Nav/>
         <Pages.Term/>
-       
         <BottomFooter />
         </Route>
       </Switch>

@@ -22,7 +22,7 @@
   },
   "license": "ISC",
   "browserslist": "> 1%,last 2 versions",
-
+"homepage": "/dev/mdvphp/",
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
@@ -61,6 +61,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.17.5",
     "react-hot-loader": "^4.13.0",
+    "react-js-pagination": "^3.0.3",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-slick": "^0.28.1",

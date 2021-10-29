@@ -58,7 +58,10 @@ const NavBar = (props) => {
                 <a class="nav-link" >
                 <Link to="/contact-us">Contact Us</Link> </a>
                 </li>
-                   
+                <li class="nav-item scrollto active">
+                <a class="nav-link" >
+                <Link to="/blog">Blog</Link> </a>
+                </li>
             </ul>
         
           <button class="btn btn-success my-2 my-sm-0"  type="submit"><Link  onClick={modalOpenFunc}>Request A Consultation</Link></button>
