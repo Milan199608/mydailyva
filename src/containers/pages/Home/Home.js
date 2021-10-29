@@ -1,7 +1,8 @@
 import React,{ useState } from 'react'
-import { Helmet } from 'react-helmet';
+//import { Helmet } from 'react-helmet';
 import {Modal,Banner,Card, Client, CommonCard, ContactForm} from '../../../components';
 import {PageContainer} from '../../';
+
 
 const Home = () => {
 
@@ -113,6 +114,8 @@ const Home = () => {
         titleText: "Contact Us",
         bodyComponent: <ContactForm />
       };
+
+      
 
 
     return (
