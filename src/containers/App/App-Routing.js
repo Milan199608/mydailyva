@@ -4,11 +4,12 @@ import React  from "react";
 import {Route, Switch} from "react-router-dom";
 import {Pages} from "../";
 
+
 //import {useLocalStorage} from "../../hooks";
 //import {PageLoadingSpinner} from "../../components";
 import {applicationConstants} from "../../constants";
 const {ROUTES} = applicationConstants;
-import {Nav,TopFooter,BottomFooter} from '../../components';
+import {Nav,TopFooter,BottomFooter,BlogDetails} from '../../components';
 
 
 //import {appActions} from "../../store";
@@ -66,6 +67,11 @@ export const AppRouting = ({errorThrown}) => {
         <Route exact path={`/${ROUTES.TERM}`}>
         <Nav/>
         <Pages.Term/>
+        <BottomFooter />
+        </Route>
+        <Route exact path={`/${ROUTES.BLOG.$text}`}>
+        <Nav/>
+        <BlogDetails/>
         <BottomFooter />
         </Route>
       </Switch>
