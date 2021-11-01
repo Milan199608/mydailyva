@@ -30,6 +30,7 @@ export const ROUTES = Object.freeze({
   CONTACTUS: "contact-us",
   PRIVACY:"privacy-policy",
   TERM:"terms-condition",
+  BLOG:"blog"
 
 
 
@@ -37,7 +38,8 @@ export const ROUTES = Object.freeze({
 export const NAVITEMCLIENTLEFT = [
   {path: ROUTES.HOME, name: "Home", submenuhas: 0, submeuArr: []},
   {path: ROUTES.ABOUTUS, name: "about-us", submenuhas: 0, submeuArr: []},
-  {path: ROUTES.CONTACTUS, name: "contact-us", submenuhas: 0, submeuArr: []}
+  {path: ROUTES.CONTACTUS, name: "contact-us", submenuhas: 0, submeuArr: []},
+  {path: ROUTES.BLOG, name: "blog", submenuhas: 0, submeuArr: []}
 ];
 export const FOOTERMENU = [
   {path: ROUTES.PRIVACY, name: "privacy-policy", submenuhas: 0, submeuArr: []},

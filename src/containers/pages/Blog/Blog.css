@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.pagination-item{
+    padding:10px;
+    background: #E0E0E0;
+    border: 1px solid #E0E0E0;
+    margin:2px;
+    border-radius: 10px;
+    cursor:pointer; 
+}
+.pagination-item:hover{
+   background:#000000;
+}
+.pagination-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
