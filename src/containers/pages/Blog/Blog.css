@@ -2,6 +2,8 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'WorkSans-Regular';
+    font-weight: 400;
 
 }
 .pagination-item{
@@ -20,3 +22,6 @@
     display: flex;
     justify-content: center;
   }
+p{
+    margin-top:5px
+}
