@@ -1,26 +1,30 @@
 import React from 'react';
 import "./BlogDetails.css";
+import { useParams } from 'react-router';
 
 
-const BlogDetails = () => {
-    
+const BlogDetails = ({list}) => {
+    const {text}=useParams();
     return (
         <div>
             
          <section class="hero-banner banner-img inner-banner web-new-banner d-flex align-items-center justify-content-center " style={{background: "url(https://www.submitcube.com/assets/img/business-computer-connection-contemporary-450035.jpg) no-repeat", backgroundSize:"cover",marginTop:"5rem"}}>
-<div class="container">
+        <div class="container">
    
-<div class="col-lg-12 col-12 banner-box d-flex align-items-center justify-content-center flex-column">
-<h1 class="text-center" style={{color:"#ffffff"}}>
-Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Project
-</h1>
-</div>
-</div>
-</section>
+       <div class="col-lg-12 col-12 banner-box d-flex align-items-center justify-content-center flex-column">
+    
+             {list.filter(item=>item.text.split(" ").join("-").toLowerCase()===text).map((data,index)=>(
+              
+             <h1 class="text-center" style={{color:"#ffffff"}} key={index}>
+                <p>{data.text}</p>
+                 </h1>                                    )) }
+     </div>
+      </div>
+    </section>
             <section class="blog-detail-sec" style={{padding:"4rem 0rem",marginTop:"2rem"}}>
                 <div class="row align-items-center justify-content-center">
-                
-
+                    
+                      {list.filter(item=>item.text.split(" ").join("-").toLowerCase()===text).map((data,index)=>(
                     <div class="col-lg-10 col-12 blog-detail-cont" key={index}>
                         <div class="row justify-content-between">
                             <div class="col-lg-9  col-12 col-md-8 ">
@@ -28,10 +32,10 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                     <div class="blog-detail-part col-12">
                                         <div class="blog-tag">
                                             <div style={{float:"right"}}>
-                                                <i class="fa fa-calendar" aria-hidden="true"></i>1st september</div>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> {data.date}</div>
                                         </div>
                                         <a href="#" class="blog-dtls-in-title">
-                                            <h2 style={{marginBottom:"1rem"}}>A Quick Guide on SEO Packages for Small Businesses</h2>
+                                            <h2 style={{marginBottom:"1rem"}}>{data.text}</h2>
                                         </a>
                                         <div class="tag-box" style={{marginBottom:"1rem"}}>
                                             <i class="fa fa-tag" aria-hidden="true"></i>
@@ -40,7 +44,7 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                         </div>
                                         <div class="blog-dtls-main-sec">
                                             <p>
-                                                <img class src="https://www.submitcube.com/upload/article/1632203860d384a338ea.jpg" alt="SEO Packages" title="SEO Packages" style={{width:"100%",height:"auto"}}/>
+                                                <img class src={data.image} alt="SEO Packages" title="SEO Packages" style={{width:"100%",height:"auto"}}/>
                                             </p>
                                             <p>
                                                 "Are you aware that over 90% of customers will go onli they plan to buy something?"
@@ -196,7 +200,7 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                                                                                                                                                                                         <section class="post-author">
                                                                                                                                                                                                             <div>
                                                                                                                                                                                                                 <div style={{width:"75%",float:"left"}}>
-                                                                                                                                                                                                                    <strong>Author: Administrator</strong>
+                                                                                                                                                                                                                    <strong>{list.author}</strong>
 
                                                                                                                                                                                                                 </div>
                                                                                                                                                                                                                 <div className="clear"></div>
@@ -288,38 +292,38 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                                                                                                                                                                                             <ul>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                     
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                     
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                     
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                     
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                     
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
                                                                                                                                                                                                                 <li class="cat-item cat-item-2">
                                                                                                                                                                                                                 
-                                                                                                                                                                                                                    <a title="Article Submission" href="category-article-submission.html">Article Submission</a></li>
+                                                                                                                                                                                                                    <a title="Article Submission" >Article Submission</a></li>
 
                                                                                                                                                                                                             </ul>
                                                                                                                                                                                                         </aside>
@@ -351,7 +355,9 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                                                                                                                                                                                     
                                                                                                                                                                                                    
                                                                                                                                                                                                     </div>
-            
+                                                                                                                                                                                                     ))
+                                                                                                                                                                                                    }
+          
                                                                                                                                                                                                     </div>
                                                                                                                                                                                                     </section>
 

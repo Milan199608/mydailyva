@@ -16,8 +16,14 @@ export const Sidebar=
     title: 'Contact us',
     path: '/contact-us',
     cName: 'nav-text'
+  },
+  {
+    title: 'Blog',
+    path: '/Blog',
+    cName: 'nav-text'
   }
 ];
+
 
     
 
