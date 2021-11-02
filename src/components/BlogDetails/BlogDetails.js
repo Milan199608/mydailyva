@@ -1,9 +1,9 @@
 import React from 'react';
 import "./BlogDetails.css";
-import { useParams } from 'react-router';
+
 
 const BlogDetails = () => {
-    const {text}=useParams();
+    
     return (
         <div>
             
@@ -19,7 +19,7 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
 </section>
             <section class="blog-detail-sec" style={{padding:"4rem 0rem",marginTop:"2rem"}}>
                 <div class="row align-items-center justify-content-center">
-                {data.filter(list=>list.title===title).map((data,index)=>(
+                
 
                     <div class="col-lg-10 col-12 blog-detail-cont" key={index}>
                         <div class="row justify-content-between">
@@ -351,7 +351,7 @@ Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Projec
                                                                                                                                                                                                     
                                                                                                                                                                                                    
                                                                                                                                                                                                     </div>
-                ))}
+            
                                                                                                                                                                                                     </div>
                                                                                                                                                                                                     </section>
 
