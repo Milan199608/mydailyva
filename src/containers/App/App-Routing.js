@@ -30,7 +30,7 @@ export const AppRouting = ({errorThrown}) => {
      }
    }, [currentUserToken]); */
 
-  /*  const [blogData,setBlogData] = useState([]);
+   const [blogData,setBlogData] = useState([]);
 
    useEffect(() => {
       fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
@@ -39,32 +39,6 @@ export const AppRouting = ({errorThrown}) => {
    })     
    
    }, []);
-
-   {console.log(blogData)} */
-
-   const list = [
-    {
-        id: 1,
-        image: "https://www.ibuildsite.com/upload/article/16281592780f09698c0b.jpg",
-        text: "Key Reasons To Choose CodeIgniter Framework For Your Next Web Development Project",
-        author: "Administrator",
-        date: "September 21 , 2021",   
-    },
-    {
-        id: 2,
-        image: "https://www.ibuildsite.com/upload/article/1627714738ce6d72142e.jpg",
-        text: "Reasons to Use Shopify for eCommerce Alcoburner",
-        author: "Subhasish K",
-        date: "September 20 , 2021",
-    },
-    {
-        id: 3,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects",
-        author: "Subhasish K",
-        date: "September 21 , 2021", 
-    }    
-];
   return (
     <>
       <Switch>       
@@ -86,7 +60,7 @@ export const AppRouting = ({errorThrown}) => {
         </Route>
         <Route exact path={`/${ROUTES.BLOG}`}>
         <Nav/>
-        <Pages.Blog list={list}/>
+        <Pages.Blog blogData={blogData}/>
         <TopFooter/>
         <BottomFooter />
         </Route>
@@ -102,7 +76,7 @@ export const AppRouting = ({errorThrown}) => {
         </Route>
         <Route exact path="/blog/:text">
         <Nav/>
-       <BlogDetails list={list}/>
+       <BlogDetails blogData={blogData}/>
        <TopFooter/>
        <BottomFooter />
        </Route>

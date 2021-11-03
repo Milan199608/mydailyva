@@ -1,8 +1,8 @@
 import React from 'react';
 import "./BlogDetails.css";
 import { useParams } from 'react-router';
-const BlogDetails = ({ list }) => {
-    const { text } = useParams();
+const BlogDetails = ({blogData}) => {
+    const {post_title } = useParams();
     return (
         <div>
 
@@ -11,10 +11,10 @@ const BlogDetails = ({ list }) => {
 
                     <div class="col-lg-12 col-12 banner-box d-flex align-items-center justify-content-center flex-column">
 
-                        {list.filter(item => item.text.split(" ").join("-").toLowerCase() === text).map((data, index) => (
+                        {blogData.filter(item => item.post_title.split(" ").join("-").toLowerCase() === post_title).map((data, index) => (
 
                             <h1 class="text-center" style={{ color: "#ffffff" }} key={index}>
-                                <p>{data.text}</p>
+                                <p>{data.post_description}</p>
                             </h1>
                         ))}
                     </div>
@@ -23,7 +23,7 @@ const BlogDetails = ({ list }) => {
             <section class="blog-detail-sec" style={{ padding: "4rem 0rem", marginTop: "2rem" }}>
                 <div class="row align-items-center justify-content-center">
 
-                    {list.filter(item => item.text.split(" ").join("-").toLowerCase() === text).map((data, index) => (
+                    {blogData.filter(item => item.post_title.split(" ").join("-").toLowerCase() === post_title).map((data, index) => (
                         <div class="col-lg-10 col-12 blog-detail-cont" key={index}>
                             <div class="row justify-content-between">
                                 <div class="col-lg-9  col-12 col-md-8 ">
@@ -31,10 +31,10 @@ const BlogDetails = ({ list }) => {
                                         <div class="blog-detail-part col-12">
                                             <div class="blog-tag">
                                                 <div style={{ float: "right" }}>
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i> {data.date}</div>
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i> {data.date_of_add}</div>
                                             </div>
                                             <a href="#" class="blog-dtls-in-title">
-                                                <h2 style={{ marginBottom: "1rem" }}>{data.text}</h2>
+                                                <h2 style={{ marginBottom: "1rem" }}>{data.post_title}</h2>
                                             </a>
                                             <div class="tag-box" style={{ marginBottom: "1rem" }}>
                                                 <i class="fa fa-tag" aria-hidden="true"></i>

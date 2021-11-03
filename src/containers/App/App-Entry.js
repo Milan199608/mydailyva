@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Provider} from "react-redux";
 import {BrowserRouter} from "react-router-dom";
-
 import AppRouting from "./App-Routing";
 // import {applicationConstants} from '../../constants';
 import initializeStore from "../../store";
@@ -40,7 +39,7 @@ export class AppEntry extends Component {
 
     return (
       <Provider store={initializeStore()}>
-        <BrowserRouter >
+        <BrowserRouter>
           {/*<div id='global-header' class='global-header'>*/}
           {/*  /!* eslint-disable-next-line react/jsx-no-undef *!/*/}
           {/*  <span>GLOBAL HEADER</span>*/}

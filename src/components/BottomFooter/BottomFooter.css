@@ -61,9 +61,13 @@
     padding: 10px 0;
     display: flex;
     align-items: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
   }
   #footer .footer-top .footer-links ul li:first-child {
     padding-top: 0;
+    color:rgb(33, 194, 243);
+  
   }
   #footer .footer-top .footer-links ul a {
     color: rgba(255, 255, 255, 0.75);
@@ -71,7 +75,7 @@
     display: inline-block;
     line-height: 1;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
   }
   #footer .footer-top .footer-links ul a:hover {
     color: #fff;
@@ -95,7 +99,7 @@
 #footer .credits {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
 }
 #footer .copyright p{
@@ -125,13 +129,13 @@
   text-decoration: none;
 }
 .Last{
-  font-size: 11px;
+  font-size: 14px;
 }
 .form-group {
   position: relative;
 }
 .subscribe.form-control{
-  height: 44px;
+    height: 44px;
     background: none;
     box-shadow: none;
     font-size: 14px;
