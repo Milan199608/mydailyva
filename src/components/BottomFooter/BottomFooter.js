@@ -9,16 +9,18 @@ const {  REACT_APP_MYDAILYVA_API_PROTOCOL
     : API_URL} = configSettings; */
 
 const BottomFooter = () => {
-   const [items, setItems] = useState("")
+
+   const [items, setItems] = useState([]);
+   var data = JSON.stringify();
    useEffect(()=>{
      fetch("https://www.mydailyva.com/dev/api/getConfiguration").then(res=>res.json()).then(
        (result)=>{
-         setItems(result);
+         setItems(result.data);
        }
      )
    },[])
+   {console.log(items)}
   return (
-   
     <div>
      <footer id="footer" >
        <div class="footer-top">
@@ -34,15 +36,13 @@ const BottomFooter = () => {
              </div> 
              <div class="col-lg-4 footer-links">
                <h4>CONTACT INFO</h4>
-               {
-               Object.keys(items).map((item,id)=>(
-               <ul key={id}>
-                 <h6><li><i class="bx bx-chevron-right"></i>{items[item].storeownername}</li></h6>
-                 <li><i class="bx bx-chevron-right"></i> {items[item].address}</li>
-                 <li><i class="bx bx-chevron-right"></i>{items[item].site_phone_no}</li>
-                 <li><i class="bx bx-chevron-right"></i> {items[item].emailid}</li>
+             <ul>
+                 <h6><li><i class="bx bx-chevron-right"></i>{items.storeownername}</li></h6>
+                 <li><i class="bx bx-chevron-right"></i> {items.address}</li>
+                 <li><i class="bx bx-chevron-right"></i>{items.site_phone_no}</li>
+                 <li><i class="bx bx-chevron-right"></i> {items.emailid}</li>
                </ul>
-                ))}
+            
              </div>
              <div class="col-lg-4 footer-links mt-3">
                <h4>GET CONNECTED</h4>
@@ -54,15 +54,14 @@ const BottomFooter = () => {
                  <button type="submit" id="btn_subscribe" class="btn btn-success btn-primary">subscribe</button>
                </form>
                <h6 >Follow us on</h6>
-               {
-               Object.keys(items).map((item,id)=>(
-               <div class="social-links" key={id} >
-                 <a href={items[item].facebooklink} class="twitter"><i class="fab fa-facebook"></i></a>
-                 <a href={items[item].instagramlink} class="instagram"><i class="fab fa-instagram"></i></a>
-                 <a href={items[item].linkedinlink} class="linkedin"><i class="fab fa-linkedin"></i></a>
-                 <a href={items[item].youtubelink} class="youtube"><i class="fab fa-youtube"></i></a>
+               
+               <div class="social-links"  >
+                 <a href={items.facebooklink} class="twitter"><i class="fab fa-facebook"></i></a>
+                 <a href={items.instagramlink} class="instagram"><i class="fab fa-instagram"></i></a>
+                 <a href={items.linkedinlink} class="linkedin"><i class="fab fa-linkedin"></i></a>
+                 <a href={items.youtubelink} class="youtube"><i class="fab fa-youtube"></i></a>
                </div>
-                  ))}
+                
              </div>
            </div>
          </div>
@@ -71,6 +70,7 @@ const BottomFooter = () => {
        <div class="container">
          <div class="copyright">
            <div className="Last" >
+           &copy;{items.copyright}
           
            </div>
          </div>

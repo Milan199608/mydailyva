@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React  from "react";
+import React,{useState,useEffect}  from "react";
 //import {useSelector, useDispatch} from "react-redux";
 import {Route, Switch} from "react-router-dom";
 import {Pages} from "../";
@@ -31,6 +31,19 @@ export const AppRouting = ({errorThrown}) => {
        dispatch(getInfo(currentUserToken));
      }
    }, [currentUserToken]); */
+
+   const [blogData,setBlogData] = useState([]);
+
+   useEffect(() => {
+      fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
+   .then(res=>res.json()).then((result)=>{
+       setBlogData(result)
+   })     
+   
+   }, []);
+
+   {console.log(blogData)}
+
    const list = [
     {
         id: 1,
@@ -51,116 +64,12 @@ export const AppRouting = ({errorThrown}) => {
         image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
         text: "What Are URL Redirects And Why Use URL Redirects",
         author: "Subhasish K",
-        date: "September 21 , 2021",
-       
-    },
-    {
-        id: 4,
-        image: "https://www.ibuildsite.com/upload/article/1626156407dbec194094.jpg",
-        text: "Reasons to Use Shopify for eCommerce Alcoburner?",
-        author: "Subhasish  K",
-        date: "18th August",
-      
-    },
-    {
-        id: 5,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-       
-    },
-    {
-        id: 6,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-      
-    },
-    {
-        id: 7,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    },
-    {
-        id: 8,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
+        date: "September 21 , 2021", 
     }
-    ,
-    {
-        id: 9,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 10,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 11,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 12,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 13,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 14,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What Are URL Redirects And Why Use URL Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-    ,
-    {
-        id: 15,
-        image: "https://www.ibuildsite.com/upload/article/1627033129e6f99df011.jpg",
-        text: "What-Are-URL-Redirects-And-Why-Use-URL-Redirects?",
-        author: "Administrator",
-        date: "25th August",
-        href: "https://www.ibuildsite.com/what-are-url-redirects-and-why-use-url-redirects.html"
-    }
-  
+   
+ 
 ];
 
-  
 
   return (
     <>
@@ -185,6 +94,7 @@ export const AppRouting = ({errorThrown}) => {
         <Route exact path={`/${ROUTES.BLOG}`}>
         <Nav/>
         <Pages.Blog list={list}/>
+        <TopFooter/>
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.PRIVACY}`}>
@@ -200,6 +110,7 @@ export const AppRouting = ({errorThrown}) => {
         <Route exact path="/blog/:text">
         <Nav/>
        <BlogDetails list={list}/>
+       <TopFooter/>
        <BottomFooter />
         </Route>
       </Switch>
