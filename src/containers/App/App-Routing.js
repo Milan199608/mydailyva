@@ -3,8 +3,6 @@ import React,{useState,useEffect}  from "react";
 //import {useSelector, useDispatch} from "react-redux";
 import {Route, Switch} from "react-router-dom";
 import {Pages} from "../";
-
-
 //import {useLocalStorage} from "../../hooks";
 //import {PageLoadingSpinner} from "../../components";
 import {applicationConstants} from "../../constants";
@@ -32,7 +30,7 @@ export const AppRouting = ({errorThrown}) => {
      }
    }, [currentUserToken]); */
 
-   const [blogData,setBlogData] = useState([]);
+  /*  const [blogData,setBlogData] = useState([]);
 
    useEffect(() => {
       fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
@@ -42,7 +40,7 @@ export const AppRouting = ({errorThrown}) => {
    
    }, []);
 
-   {console.log(blogData)}
+   {console.log(blogData)} */
 
    const list = [
     {
@@ -65,15 +63,10 @@ export const AppRouting = ({errorThrown}) => {
         text: "What Are URL Redirects And Why Use URL Redirects",
         author: "Subhasish K",
         date: "September 21 , 2021", 
-    }
-   
- 
+    }    
 ];
-
-
   return (
     <>
-
       <Switch>       
         <Route  exact path ="/"  >
         <Nav />
@@ -98,8 +91,8 @@ export const AppRouting = ({errorThrown}) => {
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.PRIVACY}`}>
-          <Nav/>
-          <Pages.Privacy/>
+        <Nav/>
+        <Pages.Privacy/>
         <BottomFooter />
         </Route>
         <Route exact path={`/${ROUTES.TERM}`}>
@@ -112,7 +105,7 @@ export const AppRouting = ({errorThrown}) => {
        <BlogDetails list={list}/>
        <TopFooter/>
        <BottomFooter />
-        </Route>
+       </Route>
       </Switch>
 
     </>

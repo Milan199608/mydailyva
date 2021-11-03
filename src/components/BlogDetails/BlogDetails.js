@@ -1,8 +1,6 @@
 import React from 'react';
 import "./BlogDetails.css";
 import { useParams } from 'react-router';
-
-
 const BlogDetails = ({ list }) => {
     const { text } = useParams();
     return (

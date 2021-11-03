@@ -5,11 +5,10 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 
-
-export const Blog = ({list}) => {
+export const Blog = () => {
 
     
-  /*   const [blogData,setBlogData] = useState([]);
+    const [blogData,setBlogData] = useState([]);
 
     useEffect(() => {
        fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
@@ -17,8 +16,7 @@ export const Blog = ({list}) => {
         setBlogData(result)
     })     
     
-    }, []) */
-
+    }, [])
 
     return (
         <div>
@@ -34,15 +32,15 @@ export const Blog = ({list}) => {
                     <div class="col-lg-9 col-12">
                         <div class="row">
                             {
-                            list.map((item,id)=>{ 
+                            blogData.map((item,id)=>{ 
                                     return(
                             <div class="col-lg-4 col-md-6 col-sm-4 col-12 blog-hold" key={id}>
                              <a class="col-12 blog-sec-box" title="A Quick Guide on SEO Packages for Small Businesses">
                                  
-                                 <Link to={`/blog/${item.text.split(" ").join("-").toLowerCase()}`}>
+                                 <Link to={`/blog/${item.post_title.split(" ").join("-").toLowerCase()}`}>
                                     <div class="feature-blog-img">
-                                        <img src={item.image}  alt="user"/>
-                                        <span class="date">{item.date}</span>
+                                        <img src={`https://www.mydailyva.com/dev/mdvphp/upload/blog/150/${item.postimage}`} alt="user"/>
+                                        <span class="date">{item.date_of_add}</span>
                                     </div>
                                     <div class="blog-dtls-main">
                                         <div class="blog-box-title">
