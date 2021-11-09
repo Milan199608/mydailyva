@@ -1,22 +1,34 @@
-import React,{ useState } from 'react';                                                                                                                                                                          
+import React,{ useState,useEffect } from 'react';                                                                                                                                                                          
 import {Modal,Banner,Card, Client, CommonCard, ContactForm,Nav} from '../../../components';
 import {PageContainer} from '../../';
 
 
 const Home = () => {
+    const [items, setItems] = useState([]);
+    useEffect(()=>{
+        var data = JSON.stringify();
+      fetch("https://www.mydailyva.com/dev/api/getConfiguration",{
+    })
+    .then(res=>res.json()).then(
+        (result)=>{
+          setItems(result.data);
+        }
+      )
+    },[])
+    {console.log(items)}
 
     const specTopCardContent=[
         {                        
             
-            icon:'far fa-envelope',
-            heading:'Inbox Management',
+            icon:"far fa-calendar-alt",
+            heading:"Inbox Management",
             link:"",
             
         },
         {
             icon:'far fa-calendar-alt',
             heading:'Calendar Management',
-            link:''
+            link:'',
         },
         {
             icon:'far fa-money-bill-alt',
@@ -123,26 +135,21 @@ const Home = () => {
        
             {/* <Popup /> */}
             <Nav modalOpenFunc={handleModalOpenFunc}/>
-            <Banner modalOpenFunc={handleModalOpenFunc}/>
+            <Banner modalOpenFunc={handleModalOpenFunc} items={items} />
             <section id="services" class="services section-bg">
                 <div class="container" data-aos="fade-up">
+                <div dangerouslySetInnerHTML={{ __html: items.block_One_desscription }} />
                     <div class="row d-flex justify-content-center">
-                        {specTopCardContent.map((item)=>{
-                               // console.log(item);
-                                return(
                                 <div class="col-md-3">
-                                    <CommonCard item={item}/>
+                                
                                 </div>    
-                                )
-                            })
-                        }
+                           
                     </div>
                     
                 </div>
             </section>
-            <Card imgPosition="right" backgroundclass=""/>
-            <Card imgPosition="left" backgroundclass="greybck"/>
-            <Card imgPosition="right" backgroundclass=""/>
+            <Card  backgroundclass="" items={items}/>
+          
 
             <section id="services" class="services section-bg">
                 <div class="container" data-aos="fade-up">
@@ -160,7 +167,7 @@ const Home = () => {
                     
                 </div>
             </section>  
-         <Client />
+         <Client  items={items}/>
          <Modal {...addNewContactModalProps} />
         </PageContainer>
     )

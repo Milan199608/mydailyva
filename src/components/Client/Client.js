@@ -3,8 +3,8 @@ import "./Client.css";
 import Client1 from "../../assets/Image/1a71dee5.png";
 //import Client2 from "../../../Asset/Image/8d0afc2ab1a60432d5b33ba75dd9c9cc.png"
 
-const Client = () => {
-
+const Client = (props) => {
+const{items}=props;
 
     return (
         <div>
@@ -12,8 +12,9 @@ const Client = () => {
              <section id="doctors" class="doctors">
                
       <div class="container">
+      <div dangerouslySetInnerHTML={{ __html: items.block_five_desscription }} />
 
-        <div class="row">
+        {/* <div class="row">
 
           <div class="col-lg-6">
             <div class="member d-flex align-items-start">
@@ -41,8 +42,8 @@ const Client = () => {
           </div>
 
           
-        </div>
-
+        </div> */}
+        
       </div>
     </section>
             

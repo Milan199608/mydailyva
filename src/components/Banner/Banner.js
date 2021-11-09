@@ -4,7 +4,7 @@ import "./Banner.css"
 
 
 const Banner = (props) => {
-    const {modalOpenFunc} = props;
+    const {modalOpenFunc,items} = props;
 
     return (
         <div>
@@ -13,8 +13,9 @@ const Banner = (props) => {
                 <div class="container-fluid" data-aos="fade-up">
                     <div class="row justify-content-center">
                         <div class="col-xl-5 col-lg-6  pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                            <h1> the Virtual Assistant for a MyDailyVa Assistant who delivers every time.</h1>
-                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                        <h1 dangerouslySetInnerHTML={{ __html:items.text_top_home_summery}}></h1>
+                          
+                        <h2 dangerouslySetInnerHTML={{ __html:items.text_top_home_summery}}></h2>
                             <div className="btn-set"><Link class="btn-get-started btn-success scrollto mx-2" onClick={modalOpenFunc}>Request a Consultation</Link>
                             <a href="#about" class="btn-get-started btn-outline-primary scrollto">Choose your plan</a></div>
                         </div>

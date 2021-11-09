@@ -1,7 +1,6 @@
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to right, rgba(24, 25, 26, 0.6), rgba(38, 39, 41, 0.6)), linear-gradient(to right, rgb(9, 235, 223), rgba(21, 155, 165, 0) 43%);
   background-size: cover;
   background-size: 953px 545px;
   background-position: 100% 80px;

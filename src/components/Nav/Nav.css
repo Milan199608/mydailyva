@@ -34,13 +34,7 @@ ul>.nav-item >a:hover {
     .navbar .active{
         border-color:black;
     }
-    .navbar a:hover{
-       
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-     
-    }
+
     .navbar-toggler-icon{
         font:#ffffff;
         font-size: large;

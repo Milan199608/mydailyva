@@ -1,30 +1,28 @@
 
-import React,{useState,useEffect} from 'react';
+import React from "react";
 import "./Blog.css";
-import { Helmet } from 'react-helmet';
+
 import { Link } from 'react-router-dom';
 
 
-export const Blog = () => {
-
+export const Blog = ({blogData}) => { 
     
+
+  /*  
     const [blogData,setBlogData] = useState([]);
 
-    useEffect(() => {
-       fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
+    useEffect((post_id) => {
+       fetch(`https://www.mydailyva.com/dev/api/getAllPosts/${post_id}`) 
     .then(res=>res.json()).then((result)=>{
         setBlogData(result)
     })     
     
     }, [])
-
+ */
+   // {`/blog/${item.post_title.split(" ").join("-").toLowerCase()}`}
     return (
         <div>
-            <Helmet>
-                <title>Blog</title>
-                <meta name="description" content="App Description" />
-                <meta name="theme-color" content="#008f68" />
-            </Helmet>
+           
             
       
             <section class="main-blog-box">
@@ -35,16 +33,15 @@ export const Blog = () => {
                             blogData.map((item,id)=>{ 
                                     return(
                             <div class="col-lg-4 col-md-6 col-sm-4 col-12 blog-hold" key={id}>
-                             <a class="col-12 blog-sec-box" title="A Quick Guide on SEO Packages for Small Businesses">
-                                 
-                                 <Link to={`/blog/${item.post_title.split(" ").join("-").toLowerCase()}`}>
+                                 <Link class='col-12 blog-sec-box' to={`/blog-details/?post_id=${item.id}`}>
                                     <div class="feature-blog-img">
                                         <img src={`https://www.mydailyva.com/dev/mdvphp/upload/blog/150/${item.postimage}`} alt="user"/>
-                                        <span class="date">{item.date_of_add}</span>
+                                        <span class="date">{item.date_of_add}</span>  
                                     </div>
                                     <div class="blog-dtls-main">
                                         <div class="blog-box-title">
                                             <h3>{item.post_title}</h3>
+                                           
                                         </div>
                                         <div class="blog-tag ">
                                             <div class="col-lg-12 d-flex">
@@ -56,7 +53,7 @@ export const Blog = () => {
                                         </div>
                                     </div>
                                     </Link>
-                                </a>
+                       
                             </div>
                                 )} )
                                     }

@@ -33,7 +33,7 @@ export const AppRouting = ({errorThrown}) => {
    const [blogData,setBlogData] = useState([]);
 
    useEffect(() => {
-      fetch("https://www.mydailyva.com/dev/api/getAllPosts") 
+      fetch(`https://www.mydailyva.com/dev/api/getAllPosts`) 
    .then(res=>res.json()).then((result)=>{
        setBlogData(result)
    })     
@@ -74,7 +74,7 @@ export const AppRouting = ({errorThrown}) => {
         <Pages.Term/>
         <BottomFooter />
         </Route>
-        <Route exact path="/blog/:text">
+        <Route exact path="/blog-details/">
         <Nav/>
        <BlogDetails blogData={blogData}/>
        <TopFooter/>
