@@ -18,7 +18,7 @@
   text-align: inherit;
   margin-bottom:30px;
   background-color: rgb(46, 51, 59);
-  background-image: url(https://d37szscqjmjaac.cloudfront.net/production/20211022-1244/img/584896df.jpg);
+  background-image:linear-gradient(to right, rgb(40, 49, 61), rgba(40, 49, 61, 0) 43%), linear-gradient(to right, rgba(40, 49, 61, 0) 75%, rgb(40, 49, 61) 100%), url(https://d37szscqjmjaac.cloudfront.net/production/20211022-1244/img/584896df.jpg);
 }
   #hero .container, #hero .container-fluid {
     padding-top: 60px;
